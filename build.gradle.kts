@@ -41,8 +41,8 @@ artifacts.archives(tasks.shadowJar)
 tasks.shadowJar {
     archiveFileName.set(rootProject.name + "-" + rootProject.version + ".jar")
 
-    relocate("kotlin", "me.awesomemoder316.lib.dependencies")
     relocate("dev.triumphteam", "me.awesomemoder316.lib.api")
+    relocate("kotlin", "me.awesomemoder316.lib.dependencies")
     relocate("net.kyori", "me.awesomemoder316.lib.api")
     relocate("net.wesjd", "me.awesomemoder316.lib.api")
     relocate("org.bstats", "me.awesomemoder316.lib.api")
