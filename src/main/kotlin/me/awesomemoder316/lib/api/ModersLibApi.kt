@@ -18,7 +18,7 @@ import java.util.*
 class ModersLibApi {
 
     /**
-     * Detailed update check, including changelog. Uses Github tags.
+     * Github update check, using Github tags.
      * This only works properly if the tag version is the same as the corresponding version's plugin.yml.
      * Users will not asked to update if the tag version contains "alpha" or "beta".
      *
@@ -30,7 +30,7 @@ class ModersLibApi {
      * @param downloadURL       The url where the updated plugin can be fetched.
      * @param requesterPlugin   The plugin that calls this method.
      */
-    fun detailedUpdateCheck(githubUsername: String, githubProjectName: String, downloadURL: URL, requesterPlugin: Plugin) {
+    fun githubUpdateCheck(githubUsername: String, githubProjectName: String, downloadURL: URL, requesterPlugin: Plugin) {
 
         object : BukkitRunnable() {
             override fun run() {
@@ -77,7 +77,7 @@ class ModersLibApi {
                                         GeneralUtils.pastFirstCheck.add(requesterPlugin)
                                     }
 
-                                    repeatDetailedUpdateCheck(
+                                    repeatGithubUpdateCheck(
                                         githubUsername,
                                         githubProjectName,
                                         downloadURL,
@@ -139,7 +139,7 @@ class ModersLibApi {
                         ChatColor.translateAlternateColorCodes('&', GeneralUtils.plugin.config.getString("updateCheckFail")!!)
                             .replace("\$requesterPlugin", requesterPlugin.name))
 
-                    repeatDetailedUpdateCheck(githubUsername, githubProjectName, downloadURL, requesterPlugin)
+                    repeatGithubUpdateCheck(githubUsername, githubProjectName, downloadURL, requesterPlugin)
                 }
             }
         }.runTaskAsynchronously(GeneralUtils.plugin)
@@ -156,7 +156,7 @@ class ModersLibApi {
      * @param requesterPlugin       The plugin that calls this method.
      * @param downloadURL           The url where the updated plugin can be fetched.
      */
-    fun basicSpigotCheck(resourceId: Int, requesterPlugin: Plugin, downloadURL: URL) {
+    fun spigotUpdateCheck(resourceId: Int, requesterPlugin: Plugin, downloadURL: URL) {
         if (GeneralUtils.plugin.config.getList("ignoreUpdates")?.contains(requesterPlugin.name) == false) {
             Bukkit.getScheduler().runTaskAsynchronously(GeneralUtils.plugin, Runnable {
                 try {
@@ -220,7 +220,7 @@ class ModersLibApi {
                             GeneralUtils.pastFirstCheck.add(requesterPlugin)
                         }
 
-                        repeatBasicSpigotCheck(resourceId, requesterPlugin, downloadURL)
+                        repeatSpigotUpdateCheck(resourceId, requesterPlugin, downloadURL)
                     }
 
                 } catch (exception: IOException) {
@@ -229,7 +229,7 @@ class ModersLibApi {
                         ChatColor.translateAlternateColorCodes('&', GeneralUtils.plugin.config.getString("updateCheckFail")!!)
                             .replace("\$requesterPlugin", requesterPlugin.name))
 
-                    repeatBasicSpigotCheck(resourceId, requesterPlugin, downloadURL)
+                    repeatSpigotUpdateCheck(resourceId, requesterPlugin, downloadURL)
                 }
             })
         }
@@ -245,18 +245,18 @@ class ModersLibApi {
     }
 
 
-    private fun repeatBasicSpigotCheck(resourceId: Int, requesterPlugin: Plugin, downloadURL: URL) {
+    private fun repeatSpigotUpdateCheck(resourceId: Int, requesterPlugin: Plugin, downloadURL: URL) {
         object : BukkitRunnable() {
             override fun run() {
-                basicSpigotCheck(resourceId, requesterPlugin, downloadURL)
+                spigotUpdateCheck(resourceId, requesterPlugin, downloadURL)
             }
         }.runTaskLaterAsynchronously(GeneralUtils.plugin, 576000) //Runs 8 hours later
     }
 
-    private fun repeatDetailedUpdateCheck(githubUsername: String, githubProjectName: String, downloadURL: URL, requesterPlugin: Plugin) {
+    private fun repeatGithubUpdateCheck(githubUsername: String, githubProjectName: String, downloadURL: URL, requesterPlugin: Plugin) {
         object: BukkitRunnable() {
             override fun run() {
-                detailedUpdateCheck(githubUsername, githubProjectName, downloadURL, requesterPlugin)
+                githubUpdateCheck(githubUsername, githubProjectName, downloadURL, requesterPlugin)
             }
         }.runTaskLaterAsynchronously(GeneralUtils.plugin, 576000) //Runs 8 hours later
     }
