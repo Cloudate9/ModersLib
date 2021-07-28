@@ -39,7 +39,7 @@ class ModersLib: JavaPlugin() {
 
         getCommand("moderslib")?.setExecutor(ViewUpdates())
 
-        ModersLibApi().detailedUpdateCheck("awesomemoder316",
+        ModersLibApi().githubUpdateCheck("awesomemoder316",
             "moderslib",
             URL("https://www.curseforge.com/minecraft/bukkit-plugins/moderslib"),
             this)
