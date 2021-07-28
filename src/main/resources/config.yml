@@ -1,0 +1,16 @@
+# The messages support Minecraft colour codes. However, instead of using the '§' symbol, please use '&' instead.
+# i.e. ChatColor.GOLD is "&6" instead of "§6".
+#
+# noPermissionViewMessage: The message sent when a player without the moderslib.receivePluginUpdates permission tries to view updates.
+# rejectConsole: The message sent when the Console tries to perform an action that it cannot do.
+#
+# The following update messages when sent to console may not be the ones specified below, if the plugin dev did not use ModersLib.
+# updateAvailable: The message used when a new version to update to is detected
+# updateCheckFail: The message sent to console when an attempted update check fails for any reason
+# upToDate: The message sent to console when an update check is successful and a plugin is up to date
+
+noPermissionView: "&cYou do not have permission to view updates!"
+rejectConsole: "&cThe console cannot perform this action!"
+updateAvailableMessage: "&6You are on version $oldVersion of $pluginName when version $latestVersion is available! Go to $downloadURL to update!"
+updateCheckFail: "&c$requesterPlugin failed to check for updates!"
+upToDate: "&6$requesterPlugin is up to date!"

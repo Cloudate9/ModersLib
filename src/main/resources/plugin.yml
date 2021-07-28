@@ -1,0 +1,14 @@
+name: ModersLib
+author: Awesomemoder316
+main: me.awesomemoder316.lib.ModersLib
+version: 1.17.1-1
+api-version: 1.14
+description: A dependency to other plugins.
+permissions:
+  modersLib.receivePluginUpdates:
+    description: People with this permission will receive plugin updates.
+    default: op
+commands:
+  moderslib:
+    description: A command to view plugin updates!
+    usage: /moderslib
