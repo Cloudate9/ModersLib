@@ -1,6 +1,6 @@
-package me.awesomemoder316.lib.api
+package io.github.awesomemoder316.lib.api
 
-import me.awesomemoder316.lib.utils.GeneralUtils
+import io.github.awesomemoder316.lib.utils.GeneralUtils
 import org.bukkit.Bukkit
 import org.bukkit.ChatColor
 import org.bukkit.Material
@@ -18,7 +18,7 @@ import java.util.*
 class ModersLibApi {
 
     /**
-     * Github update check, using Github tags.
+     * Github update check, using Github releases. Tags alone do not work.
      * This only works properly if the tag version is the same as the corresponding version's plugin.yml.
      * Users will not asked to update if the tag version contains "alpha" or "beta".
      *

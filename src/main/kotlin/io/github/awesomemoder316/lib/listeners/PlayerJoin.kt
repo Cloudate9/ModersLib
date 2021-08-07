@@ -1,6 +1,6 @@
-package me.awesomemoder316.lib.listeners
+package io.github.awesomemoder316.lib.listeners
 
-import me.awesomemoder316.lib.utils.GeneralUtils
+import io.github.awesomemoder316.lib.utils.GeneralUtils
 import org.bukkit.Bukkit
 import org.bukkit.ChatColor
 import org.bukkit.event.EventHandler

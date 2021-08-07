@@ -1,9 +1,9 @@
-package me.awesomemoder316.lib
+package io.github.awesomemoder316.lib
 
-import me.awesomemoder316.lib.api.ModersLibApi
-import me.awesomemoder316.lib.command.ViewUpdates
-import me.awesomemoder316.lib.listeners.PlayerJoin
-import me.awesomemoder316.lib.utils.GeneralUtils
+import io.github.awesomemoder316.lib.api.ModersLibApi
+import io.github.awesomemoder316.lib.command.ViewUpdates
+import io.github.awesomemoder316.lib.listeners.PlayerJoin
+import io.github.awesomemoder316.lib.utils.GeneralUtils
 import net.kyori.adventure.platform.bukkit.BukkitAudiences
 import org.bukkit.Bukkit
 import org.bukkit.plugin.java.JavaPlugin
