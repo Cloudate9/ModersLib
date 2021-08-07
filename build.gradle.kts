@@ -3,7 +3,7 @@ plugins {
     kotlin("jvm") version ("1.5.21")
 }
 
-group = "me.awesomemoder316.moderslib"
+group = "io.github.awesomemoder316.moderslib"
 version = "1.17.1-2"
 
 repositories {
