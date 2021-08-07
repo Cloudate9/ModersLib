@@ -1,6 +1,6 @@
-package me.awesomemoder316.lib.utils
+package io.github.awesomemoder316.lib.utils
 
-import me.awesomemoder316.lib.ModersLib
+import io.github.awesomemoder316.lib.ModersLib
 import net.md_5.bungee.api.chat.*
 import net.md_5.bungee.api.chat.hover.content.Text
 import org.bukkit.inventory.ItemStack

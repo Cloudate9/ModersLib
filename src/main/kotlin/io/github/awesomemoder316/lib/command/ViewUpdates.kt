@@ -1,9 +1,9 @@
-package me.awesomemoder316.lib.command
+package io.github.awesomemoder316.lib.command
 
 import dev.triumphteam.gui.builder.item.ItemBuilder
 import dev.triumphteam.gui.guis.Gui
 import dev.triumphteam.gui.guis.GuiItem
-import me.awesomemoder316.lib.utils.GeneralUtils
+import io.github.awesomemoder316.lib.utils.GeneralUtils
 import net.kyori.adventure.text.Component
 import org.bukkit.ChatColor
 import org.bukkit.Material

@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "me.awesomemoder316.moderslib"
-version = "1.17.1-1"
+version = "1.17.1-2"
 
 repositories {
     mavenCentral()
@@ -41,9 +41,9 @@ artifacts.archives(tasks.shadowJar)
 tasks.shadowJar {
     archiveFileName.set(rootProject.name + "-" + rootProject.version + ".jar")
 
-    relocate("dev.triumphteam", "me.awesomemoder316.lib.api")
-    relocate("kotlin", "me.awesomemoder316.lib.dependencies")
-    relocate("net.kyori", "me.awesomemoder316.lib.api")
-    relocate("net.wesjd", "me.awesomemoder316.lib.api")
-    relocate("org.bstats", "me.awesomemoder316.lib.api")
+    relocate("dev.triumphteam", "io.github.awesomemoder316.lib.api")
+    relocate("kotlin", "io.github.awesomemoder316.lib.dependencies")
+    relocate("net.kyori", "io.github.awesomemoder316.lib.api")
+    relocate("net.wesjd", "io.github.awesomemoder316.lib.api")
+    relocate("org.bstats", "io.github.awesomemoder316.lib.api")
 }
