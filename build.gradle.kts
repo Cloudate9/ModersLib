@@ -28,7 +28,7 @@ dependencies {
     implementation(kotlin("stdlib")) //Included here instead of Library in plugin.yml cause of 1.14.2 not supporting Library
     implementation("dev.triumphteam:triumph-gui:3.0.3")
     implementation("net.kyori:adventure-platform-bukkit:4.0.0-SNAPSHOT")
-    implementation("net.wesjd:anvilgui:1.5.2-SNAPSHOT")
+    implementation("net.wesjd:anvilgui:1.5.3-SNAPSHOT")
     implementation("org.bstats:bstats-bukkit:2.2.1")
 }
 
