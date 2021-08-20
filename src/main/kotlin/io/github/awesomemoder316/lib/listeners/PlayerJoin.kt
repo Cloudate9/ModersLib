@@ -8,14 +8,12 @@ import org.bukkit.event.EventPriority
 import org.bukkit.event.Listener
 import org.bukkit.event.player.PlayerJoinEvent
 
-internal class PlayerJoin: Listener {
+class PlayerJoin: Listener {
 
     @EventHandler(priority = EventPriority.LOWEST) //Ensures that this is sent last.
     fun onJoin(e: PlayerJoinEvent) {
-        if (Bukkit.getPluginManager().isPluginEnabled("AutoMode")) return
-        //AutoMode by Awesomemoder316 will send the message if it is found.
 
-        if (!e.player.hasPermission("modersLib.receivePluginUpdates")) return
+        if (!e.player.hasPermission("moderslib.receivepluginupdates")) return
 
             if (GeneralUtils.updateDetected.isNotEmpty())
 

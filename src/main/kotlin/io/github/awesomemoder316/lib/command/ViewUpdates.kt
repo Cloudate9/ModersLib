@@ -13,7 +13,7 @@ import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
 import org.bukkit.event.inventory.InventoryClickEvent
 
-internal class ViewUpdates: CommandExecutor {
+class ViewUpdates: CommandExecutor {
 
     override fun onCommand(sender: CommandSender, cmd: Command, label: String, args: Array<out String>): Boolean {
 
@@ -22,7 +22,7 @@ internal class ViewUpdates: CommandExecutor {
             return true
         }
 
-        if (!sender.hasPermission("moderslib.receivePluginUpdates")) {
+        if (!sender.hasPermission("moderslib.receivepluginupdates")) {
             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', GeneralUtils.plugin.config.getString("noPermissionView")!!))
             return true
         }

@@ -37,32 +37,4 @@ object GeneralUtils {
         textComponent.clickEvent = ClickEvent(ClickEvent.Action.RUN_COMMAND, clickCommand)
         return textComponent
     }
-
-    @Suppress("DEPRECATION")
-    fun createBaseComponent(message: String, hoverMessage: String?, clickCommand: String): Array<out BaseComponent> {
-        val baseComponent = ComponentBuilder(message)
-            .event(ClickEvent(ClickEvent.Action.RUN_COMMAND, clickCommand))
-
-        if (hoverMessage != null) {
-
-
-            if (pre116) {
-                baseComponent.event(
-                    HoverEvent( //For backwards compatibility, deprecated
-                        HoverEvent.Action.SHOW_TEXT,
-                        arrayOf(TextComponent(hoverMessage))
-                    ) //For backwards compatibility.
-                )
-            } else {
-                baseComponent.event(
-                    HoverEvent(
-                        HoverEvent.Action.SHOW_TEXT,
-                        Text(hoverMessage)
-                    )
-                )
-            }
-        }
-
-        return baseComponent.create()
-    }
 }

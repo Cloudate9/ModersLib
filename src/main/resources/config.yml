@@ -1,7 +1,7 @@
 # The messages support Minecraft colour codes. However, instead of using the '§' symbol, please use '&' instead.
 # i.e. ChatColor.GOLD is "&6" instead of "§6".
 #
-# noPermissionViewMessage: The message sent when a player without the moderslib.receivePluginUpdates permission tries to view updates.
+# noPermissionViewMessage: The message sent when a player without the moderslib.receivepluginupdates permission tries to view updates.
 # rejectConsole: The message sent when the Console tries to perform an action that it cannot do.
 #
 # The following update messages when sent to console may not be the ones specified below, if the plugin dev did not use ModersLib.
