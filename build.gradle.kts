@@ -21,7 +21,7 @@ dependencies {
     implementation("dev.triumphteam:triumph-gui:3.0.3")
     implementation("net.kyori:adventure-platform-bukkit:4.0.0")
     implementation("net.wesjd:anvilgui:1.5.3-SNAPSHOT")
-    implementation("org.bstats:bstats-bukkit:2.2.1")
+    implementation("org.bstats:bstats-bukkit:3.0.0")
     implementation(kotlin("stdlib"))
     compileOnly("org.spigotmc:spigot-api:1.17.1-R0.1-SNAPSHOT")
 }
